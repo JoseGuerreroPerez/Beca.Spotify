@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "14a37416-aac9-45c0-9710-1709d683cc68",
+		"name": "ASP.NET Core 6 Web API Fundamentals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24203946"
+	},
+	"item": [
+		{
+			"name": "GET Playlists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/Playlists",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"Playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/Playlists/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"Playlists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Playlist, filtered",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/Playlists?name=Antwerp",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"Playlists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Antwerp"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Playlists, paged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/Playlists?pageNumber=1&pageSize=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"Playlists"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Canciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/playlist/1/Canciones",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"playlist",
+						"1",
+						"Canciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Canción",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/playlist/1/Canciones/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"playlist",
+						"1",
+						"Canciones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Canción",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Vacaciones\",\n  \"description\": \"Estopa\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/playlist/1/Canciones",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"playlist",
+						"1",
+						"Canciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Canción",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"I want it all\",\n  \"description\": \"Queen\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/playlist/1/Canciones/12",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"playlist",
+						"1",
+						"Canciones",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Canción",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"op\": \"replace\",\n    \"path\": \"/name\",\n    \"value\": \"nombre prueba\"\n  }\n]"
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/playlist/1/Canciones/12",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"playlist",
+						"1",
+						"Canciones",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Canción",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/playlist/1/Canciones/12",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"playlist",
+						"1",
+						"Canciones",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

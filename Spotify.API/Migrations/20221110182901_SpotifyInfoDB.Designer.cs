@@ -10,8 +10,8 @@ using Spotify.API.DbContexts;
 namespace Spotify.API.Migrations
 {
     [DbContext(typeof(PlaylistInfoContext))]
-    [Migration("20221109005703_SpotifyDBInitialMigration")]
-    partial class SpotifyDBInitialMigration
+    [Migration("20221110182901_SpotifyInfoDB")]
+    partial class SpotifyInfoDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,7 @@ namespace Spotify.API.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(200)
+                        .HasMaxLength(300)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -47,43 +47,43 @@ namespace Spotify.API.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "The most visited urban park in the United States.",
-                            Name = "Central Park",
+                            Description = "Queen.",
+                            Name = "I want it all",
                             PlaylistId = 1
                         },
                         new
                         {
                             Id = 2,
-                            Description = "A 102-story skyscraper located in Midtown Manhattan.",
-                            Name = "Empire State Building",
+                            Description = "Estopa.",
+                            Name = "Vino tinto",
                             PlaylistId = 1
                         },
                         new
                         {
                             Id = 3,
-                            Description = "A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.",
-                            Name = "Cathedral",
+                            Description = "choppin.",
+                            Name = "piano1",
                             PlaylistId = 2
                         },
                         new
                         {
                             Id = 4,
-                            Description = "The the finest example of railway architecture in Belgium.",
-                            Name = "Antwerp Central Station",
+                            Description = "choppin.",
+                            Name = "piano2",
                             PlaylistId = 2
                         },
                         new
                         {
                             Id = 5,
-                            Description = "A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.",
-                            Name = "Eiffel Tower",
+                            Description = "Sebastián Yatra.",
+                            Name = "Tacones rojos",
                             PlaylistId = 3
                         },
                         new
                         {
                             Id = 6,
-                            Description = "The world's largest museum.",
-                            Name = "The Louvre",
+                            Description = "Rosalia.",
+                            Name = "La fama",
                             PlaylistId = 3
                         });
                 });
@@ -95,7 +95,7 @@ namespace Spotify.API.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(200)
+                        .HasMaxLength(300)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -111,20 +111,20 @@ namespace Spotify.API.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "The one with that big park.",
-                            Name = "New York City"
+                            Description = "Canciones para escuchar en el coche.",
+                            Name = "lista coche"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "The one with the cathedral that was never really finished.",
-                            Name = "Antwerp"
+                            Description = "lista de canciones de piano para concentrarse.",
+                            Name = "Concentración"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "The one with that big tower.",
-                            Name = "Paris"
+                            Description = "Lista de 50 canciones más escuchadas.",
+                            Name = "Más escuchadas"
                         });
                 });
 

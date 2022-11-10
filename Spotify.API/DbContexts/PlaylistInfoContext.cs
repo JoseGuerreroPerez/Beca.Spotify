@@ -18,59 +18,59 @@ namespace Spotify.API.DbContexts
         {
             modelBuilder.Entity<Playlist>()
                 .HasData(
-               new Playlist("New York City")
+               new Playlist("lista coche")
                {
                    Id = 1,
-                   Description = "The one with that big park."
+                   Description = "Canciones para escuchar en el coche."
                },
-               new Playlist("Antwerp")
+               new Playlist("Concentración")
                {
                    Id = 2,
-                   Description = "The one with the cathedral that was never really finished."
+                   Description = "lista de canciones de piano para concentrarse."
                },
-               new Playlist("Paris")
+               new Playlist("Más escuchadas")
                {
                    Id = 3,
-                   Description = "The one with that big tower."
+                   Description = "Lista de 50 canciones más escuchadas."
                });
 
             modelBuilder.Entity<Cancion>()
              .HasData(
-               new Cancion("Central Park")
+               new Cancion("I want it all")
                {
                    Id = 1,
                    PlaylistId = 1,
-                   Description = "The most visited urban park in the United States."
+                   Description = "Queen."
                },
-               new Cancion("Empire State Building")
+               new Cancion("Vino tinto")
                {
                    Id = 2,
                    PlaylistId = 1,
-                   Description = "A 102-story skyscraper located in Midtown Manhattan."
+                   Description = "Estopa."
                },
-                 new Cancion("Cathedral")
+                 new Cancion("piano1")
                  {
                      Id = 3,
                      PlaylistId = 2,
-                     Description = "A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans."
+                     Description = "choppin."
                  },
-               new Cancion("Antwerp Central Station")
+               new Cancion("piano2")
                {
                    Id = 4,
                    PlaylistId = 2,
-                   Description = "The the finest example of railway architecture in Belgium."
+                   Description = "choppin."
                },
-               new Cancion("Eiffel Tower")
+               new Cancion("Tacones rojos")
                {
                    Id = 5,
                    PlaylistId = 3,
-                   Description = "A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel."
+                   Description = "Sebastián Yatra."
                },
-               new Cancion("The Louvre")
+               new Cancion("La fama")
                {
                    Id = 6,
                    PlaylistId = 3,
-                   Description = "The world's largest museum."
+                   Description = "Rosalia."
                }
                );
             base.OnModelCreating(modelBuilder);

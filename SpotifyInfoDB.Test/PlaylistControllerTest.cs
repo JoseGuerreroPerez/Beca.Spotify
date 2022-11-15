@@ -25,9 +25,9 @@ namespace PlaylistInfo.Test
             playlistMock
                 .Setup(m => m.GetPlaylistsAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>(), It.IsAny<int>()))
                 .ReturnsAsync((new List<Playlist>
-                {new Playlist("linkin park"){Description = "buena lista"},
-                new Playlist("skillet"){Description = "buena play"},
-                new Playlist("solence"){ Description = "canerita"}
+                {new Playlist("lista coche"){Description = "fiesta"},
+                new Playlist("lista relax"){Description = "meditacioón"},
+                new Playlist("concentración"){ Description = "a estudiar"}
                 }, null));
             var mapperConfiguration = new MapperConfiguration(
                 cfg => cfg.AddProfile<Spotify.API.Profiles.PlaylistProfile>());
@@ -41,7 +41,7 @@ namespace PlaylistInfo.Test
         {
             //arrange   
             //Act
-            var result = await _playlistController.GetPlaylists("linkin park", "", 1, 1);
+            var result = await _playlistController.GetPlaylists("lista coche", "", 1, 1);
 
             //Assert.
             var actionResult = Assert.IsType<ActionResult<IEnumerable<Spotify.API.Models.PlaylistWithoutCancionesDto>>>(result);
@@ -53,7 +53,7 @@ namespace PlaylistInfo.Test
         {
             //arrange   
             //Act
-            var result = await _playlistController.GetPlaylists("linkin park", "", 1, 1);
+            var result = await _playlistController.GetPlaylists("lista coche", "", 1, 1);
 
             //Assert.
             var actionResult = Assert.IsType<ActionResult<IEnumerable<Spotify.API.Models.PlaylistWithoutCancionesDto>>>(result);
@@ -66,7 +66,7 @@ namespace PlaylistInfo.Test
             //arrange   
             //Act
 
-            var result = await _playlistController.GetPlaylists("linkin park", "", 1, 1);
+            var result = await _playlistController.GetPlaylists("lista coche", "", 1, 1);
 
             //Assert.
             var actionResult = Assert.IsType<ActionResult<IEnumerable<Spotify.API.Models.PlaylistWithoutCancionesDto>>>(result);

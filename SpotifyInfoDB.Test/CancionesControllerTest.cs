@@ -30,9 +30,9 @@ namespace PlaylistInfo.Test
             playlistMock
                 .Setup(m => m.GetPlaylistsAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>(), It.IsAny<int>()))
                 .ReturnsAsync((new List<Playlist>
-                {new Playlist("linkin park"){Id= 1, Description = "buena lkista"},
-                new Playlist("skillet"){Id= 2,Description = "buena play"},
-                new Playlist("solence"){Id=3, Description = "canerita"}
+                {new Playlist("lista coche"){Description = "fiesta"},
+                new Playlist("lista relax"){Description = "meditacioón"},
+                new Playlist("concentración"){ Description = "a estudiar"}
                 }, new PaginationMetadata(10, 2, 2)));
             playlistMock
                 .Setup(m => m.PlaylistExistsAsync(It.IsAny<int>()))
@@ -41,13 +41,13 @@ namespace PlaylistInfo.Test
                 .Setup(m => m.GetCancionesForPlaylistAsync(It.IsAny<int>()))
                 .ReturnsAsync(new List<Cancion>
                 {
-                    new Cancion("in the end"){Description="best music"},
-                    new Cancion("in the end"){Description="best music"}
+                    new Cancion("vacaciones"){Description="estopa"},
+                    new Cancion("si me vas a elegir"){Description="rosalia"}
                 });
             playlistMock
                 .Setup(m => m.GetCancionForPlaylistAsync(It.IsAny<int>(), It.IsAny<int>()))
                 .ReturnsAsync(
-                    new Cancion("in the end"){Description="best music",PlaylistId=2,Playlist = new Playlist("skillet") { Id = 2, Description = "buena play" } }
+                    new Cancion("vacaciones"){Description= "estopa", PlaylistId=2,Playlist = new Playlist("lista relax") { Id = 2, Description = "meditacioón" } }
                  );
             playlistMock
                 .Setup(m => m.AddCancionForPlaylistAsync(It.IsAny<int>(), It.IsAny<Cancion>()));

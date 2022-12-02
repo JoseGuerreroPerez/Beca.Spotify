@@ -42,7 +42,17 @@ builder.Services.AddScoped<IPlaylistInfoRepository, PlaylistInfoRepository>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+// Integracion de API con Angular
+builder.Services.AddCors();
+
 var app = builder.Build();
+
+/* .WithOrigins("http://localhost:4200") */
+app.UseCors(x => x.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -42,9 +42,12 @@ namespace Spotify.API.Controllers
 
             var (cityEntities, paginationMetadata) = await _PlaylistInfoRepository
                 .GetPlaylistsAsync(name, searchQuery, pageNumber, pageSize);
-
-            Response.Headers.Add("X-Pagination",
+            if (paginationMetadata != null)
+            {
+                Response.Headers.Add("X-Pagination",
                 JsonSerializer.Serialize(paginationMetadata));
+            }
+            
 
             return Ok(_mapper.Map<IEnumerable<PlaylistWithoutCancionesDto>>(cityEntities));
         }

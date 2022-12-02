@@ -5,7 +5,6 @@ namespace Spotify.API.Services
     public interface IPlaylistInfoRepository
     {
         Task<IEnumerable<Playlist>> GetPlaylistsAsync();
-
         Task<(IEnumerable<Playlist>, PaginationMetadata)> GetPlaylistsAsync(
 string? name, string? searchQuery, int pageNumber, int pageSize);
         Task<Playlist?> GetPlaylistAsync(int PlaylistId, bool includeCanciones);

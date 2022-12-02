@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.API", "Spotify.API\Spotify.API.csproj", "{437710C5-040E-4184-91F1-D5ED015B5C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spotify.API", "Spotify.API\Spotify.API.csproj", "{437710C5-040E-4184-91F1-D5ED015B5C2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotifyInfoDB.Test", "SpotifyInfoDB.Test\SpotifyInfoDB.Test.csproj", "{61363D6B-7A06-4907-A02C-F0E4061A1AC2}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Spotify.AngularAPI", "Spotify.AngularAPI\Spotify.AngularAPI.esproj", "{8E1683AB-FF50-458B-9D3B-E468B98545C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,16 @@ Global
 		{437710C5-040E-4184-91F1-D5ED015B5C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{437710C5-040E-4184-91F1-D5ED015B5C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{437710C5-040E-4184-91F1-D5ED015B5C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61363D6B-7A06-4907-A02C-F0E4061A1AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61363D6B-7A06-4907-A02C-F0E4061A1AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61363D6B-7A06-4907-A02C-F0E4061A1AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61363D6B-7A06-4907-A02C-F0E4061A1AC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1683AB-FF50-458B-9D3B-E468B98545C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1683AB-FF50-458B-9D3B-E468B98545C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1683AB-FF50-458B-9D3B-E468B98545C7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8E1683AB-FF50-458B-9D3B-E468B98545C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1683AB-FF50-458B-9D3B-E468B98545C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1683AB-FF50-458B-9D3B-E468B98545C7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
